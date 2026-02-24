@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lluvia de Amor</title>
+    <style>
+        body { margin: 0; height: 100vh; overflow: hidden; background: #ffebee; font-family: 'Georgia', serif; display: flex; justify-content: center; align-items: center; }
+        .card { background: rgba(255, 255, 255, 0.9); padding: 40px; border-radius: 20px; z-index: 10; text-align: center; box-shadow: 0 5px 15px rgba(255,0,0,0.1); max-width: 80%; }
+        h1 { color: #d32f2f; margin: 0; }
+        .heart-bg { position: absolute; color: #ffcdd2; font-size: 20px; top: -10vh; animation: fall 5s linear infinite; }
+        @keyframes fall { to { transform: translateY(110vh); } }
+        /* Generamos corazones con CSS delays distintos para que parezca lluvia natural */
+        .h1 { left: 10%; animation-duration: 4s; }
+        .h2 { left: 30%; animation-duration: 6s; animation-delay: 1s; }
+        .h3 { left: 70%; animation-duration: 3s; animation-delay: 2s; }
+        .h4 { left: 90%; animation-duration: 5s; }
+        .cta { display: inline-block; margin-top: 15px; font-size: 0.8rem; color: #d32f2f; text-decoration: none; border-bottom: 1px solid #d32f2f; }
+    </style>
+</head>
+<body>
+    <div class="heart-bg h1">❤️</div> <div class="heart-bg h2">❤️</div>
+    <div class="heart-bg h3">❤️</div> <div class="heart-bg h4">❤️</div>
+
+    <div class="card">
+        <h1>Para Ti</h1>
+        <p>Gracias por llenar mis días de alegría.</p>
+        <a href="https://wa.me/59173034076?text=Hola%2C%20quiero%20el%20dise%C3%B1o%20LLUVIA%20%F0%9F%8C%B9.%0A%0ADatos%20necesarios%3A%0A-%20Mensaje%20para%20la%20tarjeta%3A" class="cta">🌹 Pedir este diseño</a>
+    </div>
+</body>
+</html>

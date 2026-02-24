@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neón Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@400;700&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff0055;
+            --neon-blue: #00f3ff;
+            --bg-dark: #050505;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            /* Degradado de fondo más suave para dar profundidad */
+            background: radial-gradient(circle at center, #1a0b16 0%, #000000 100%);
+        }
+
+        /* Fondo Grid Cyberpunk animado - Más visible */
+        .cyber-grid {
+            position: absolute;
+            width: 200vw;
+            height: 200vh;
+            background-image: 
+                linear-gradient(rgba(255, 0, 85, 0.3) 2px, transparent 2px),
+                linear-gradient(90deg, rgba(255, 0, 85, 0.3) 2px, transparent 2px);
+            background-size: 40px 40px;
+            background-position: center bottom;
+            transform: perspective(300px) rotateX(70deg) translateY(0) translateZ(-100px); /* Perspectiva más exagerada */
+            opacity: 0.6; /* Más visible */
+            animation: grid-move 5s linear infinite; /* Más rápido */
+            z-index: -1;
+            mask-image: linear-gradient(to top, black 20%, transparent 90%);
+            -webkit-mask-image: linear-gradient(to top, black 20%, transparent 90%);
+        }
+
+        @keyframes grid-move {
+            0% { background-position: center 0; }
+            100% { background-position: center 40px; }
+        }
+
+        .neon-card {
+            border: 3px solid var(--neon-blue); /* Borde más grueso */
+            padding: 50px;
+            box-shadow: 
+                0 0 20px var(--neon-blue), 
+                inset 0 0 30px rgba(0, 243, 255, 0.2);
+            text-align: center;
+            border-radius: 2px;
+            max-width: 320px;
+            background: rgba(0, 0, 0, 0.7); /* Fondo más oscuro para contraste */
+            backdrop-filter: blur(8px);
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-family: 'Monoton', 'Orbitron', monospace; /* Fallback font */
+            font-size: 55px; /* Más grande */
+            line-height: 1;
+            color: #fff;
+            text-shadow: 
+                0 0 10px #fff,
+                0 0 20px var(--neon-pink),
+                0 0 40px var(--neon-pink),
+                0 0 80px var(--neon-pink);
+            margin: 0 0 20px 0;
+            animation: flicker 3s infinite alternate;
+        }
+        
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                text-shadow: 
+                0 0 10px #fff,
+                0 0 20px var(--neon-pink),
+                0 0 40px var(--neon-pink),
+                0 0 80px var(--neon-pink);
+                opacity: 1;
+            }
+            20%, 24%, 55% {       
+                text-shadow: none;
+                opacity: 0.5;
+            }
+        }
+
+        p { 
+            color: var(--neon-blue); 
+            margin-top: 10px; 
+            font-size: 1.2rem; 
+            text-shadow: 0 0 8px var(--neon-blue); 
+            font-family: 'Orbitron', sans-serif; /* Fuente tech para el texto también */
+            letter-spacing: 1px;
+        }
+        
+        .btn {
+            background: rgba(0, 243, 255, 0.1);
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 15px 30px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 35px;
+            box-shadow: 0 0 15px var(--neon-blue);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.2s;
+        }
+        .btn:hover { 
+            background: var(--neon-blue); 
+            color: #000; 
+            box-shadow: 0 0 50px var(--neon-blue); 
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <div class="neon-card">
+        <!-- EDITABLE: Título o Nombres (usa <br> para salto de línea) -->
+        <h1>PLAYER 1<br>& PLAYER 2</h1>
+        
+        <!-- EDITABLE: Mensaje Principal -->
+        <p>Eres mi player 2 favorita.<br>Juntos en todos los niveles.</p>
+        
+        <!-- EDITABLE: Fecha o Mensaje Extra -->
+        <p>❤️ 14/02/2026 ❤️</p>
+        
+        <a href="https://wa.me/59173034076?text=Hola%2C%20quiero%20el%20dise%C3%B1o%20NEON%20%E2%9A%A1.%0A%0ADatos%20necesarios%3A%0A-%20Nombres%3A%20" class="btn">⚡ Pedir este modelo</a>
+    </div>
+</body>
+</html>

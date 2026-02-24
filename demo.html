@@ -25,10 +25,21 @@
             max-width: 350px;
             width: 90%;
             animation: float 3s ease-in-out infinite;
+            position: relative; /* Para posicionar elementos dentro si es necesario */
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover; /* Para que la foto no se deforme */
+            margin: 0 auto 20px auto;
+            display: block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 5px solid white;
         }
         h1 { margin-bottom: 10px; font-size: 2.5rem; }
         p { font-size: 1.2rem; color: #555; }
-        .heart { font-size: 50px; color: red; margin: 20px 0; animation: beat 1s infinite; }
+        .heart { font-size: 50px; color: red; margin: 10px 0; animation: beat 1s infinite; }
         
         /* Botón de Venta */
         .buy-btn {
@@ -53,20 +64,29 @@
 <body>
 
     <div class="card">
+        <!-- PON TU FOTO AQUÍ: Cambia el src por la ruta de tu imagen -->
+        <img src="https://via.placeholder.com/150" class="profile-photo" alt="Foto de Perfil">
+        
         <div class="heart">❤️</div>
+        <!-- EDITABLE #1: Título o Nombres -->
         <h1>¡Feliz San Valentín!</h1>
-        <p id="mensaje">Eres mi persona favorita en todo el mundo. Gracias por cada momento juntos.</p>
+        
+        <!-- EDITABLE #2: Mensaje romántico -->
+        <p>Eres mi persona favorita en todo el mundo. Gracias por cada momento juntos.</p>
+        
+        <!-- EDITABLE #3: Firma -->
         <p><strong>- Con amor, Tu Pareja</strong></p>
 
         <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
 
         <p style="font-size: 0.9rem; color: #888;">¿Quieres regalar una tarjeta digital así?</p>
         
-        <a href="https://wa.me/59173034076?text=Hola,%20quiero%20una%20tarjeta%20digital%20personalizada%20por%20San%20Valentín" 
+        <a href="https://wa.me/59173034076?text=Hola%2C%20quiero%20el%20dise%C3%B1o%20CL%C3%81SICO%20%F0%9F%92%8C.%0A%0ADatos%20necesarios%3A%0A-%20Nombres%3A%20%0A-%20Mensaje%20Principal%3A%0A-%20Firma%20(De%20quien)%3A%0A(Te%20env%C3%ADo%20la%20Foto%20por%20aqu%C3%AD)" 
            class="buy-btn" target="_blank">
-           🎁 Pedir la mía por $5
+           🎁 Pedir la mía por 5 Bolivianos
         </a>
     </div>
 
+    <!-- Script eliminado para que sea estático y tú lo edites manualmente -->
 </body>
 </html>
